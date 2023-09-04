@@ -29,7 +29,7 @@ def test_cover_card_number():
     assert functions.cover_card_number('8201420097886664') == '8201 42** **** 6664'
 
 
-def test_prepare_user_msg():
+def test_share_message():
     data = {
         'id': 41428829,
         'state': 'EXECUTED',
@@ -49,4 +49,4 @@ def test_prepare_user_msg():
     result = '''03.07.2019 Перевод организации
 MasterCard 7158 30** **** 6758 -> Счет **5560
 8221.37 USD.'''
-    assert functions.prepare_user_msg(data) == result
+    assert functions.share_message(data) == result
